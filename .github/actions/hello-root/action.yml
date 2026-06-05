@@ -1,0 +1,8 @@
+name: 'Hello Root'
+description: 'Runs hello.py from the root of the test-gh-actions repo'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run hello world
+      shell: bash
+      run: python "${{ github.action_path }}/../../../hello.py"

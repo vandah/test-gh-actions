@@ -1,0 +1,8 @@
+name: 'Hello Local'
+description: 'Runs hello.py from the action folder itself'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run hello world
+      shell: bash
+      run: python "${{ github.action_path }}/hello.py"
